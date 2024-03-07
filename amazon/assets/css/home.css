@@ -1,0 +1,82 @@
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-nav .nav-item .nav-link{
+    color: #fff !important;
+}
+
+.input-group .form-select{
+    background-color: transparent !important;
+}
+.navbar-nav .form-select{
+    background-color: transparent !important;
+    color: #fff;
+}
+
+.menu li:hover .submenu{
+    height: fit-content;
+    width: 450px;
+}
+
+.submenu{
+    width: 450px;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    transition: height 0.2s ease-in-out;
+    flex-direction: column;
+    list-style: none !important;
+    align-items: flex-start;
+    padding-left: 0;
+    left: -120px;
+}
+.submenu ul li a{
+    text-decoration: none;
+    color: #8E8E8E;
+    font-size: 14px;
+}
+.submenu ul li a:hover{
+    text-decoration: underline;
+    color: #fa811f;
+    font-size: 14px;
+}
+
+.info-border-left-line{
+    position: relative;
+}
+.info-border-left-line::before{
+    position: absolute;
+    content: '';
+    background-color: #E8E9E9;
+    height: 100%;
+    width: 1px;
+    left: -30px;
+}
+
+.info-green-bg{
+    background-color: #E7F4F5;
+    padding: 10px;
+}
+
+.card-pd-left{
+    position: relative;
+    padding-left: 80px;
+  }
+  .info-profile-img img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+.fa-circle-plus{
+    color: #D6D9D9;
+}
+
+
