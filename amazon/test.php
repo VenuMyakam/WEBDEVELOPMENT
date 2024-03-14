@@ -1,15 +1,8 @@
-<?php 
-  session_start();
-
-  if (!isset($_SESSION['email'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location: login.php');
-  }
-  if (isset($_GET['logout'])) {
-	session_destroy();
-	unset($_SESSION['email']);
-	header("location: login.php");
-}
+<?php
+    require 'connection.php';
+    $_SESSION["id"] = '6'; // User's session
+    $sessionId = $_SESSION["id"];
+    $user = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM users WHERE id = $sessionId"));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -170,7 +163,25 @@
 
 
     <section>
-
+        <div class="test">
+            <form class="form" id = "form" action="" enctype="multipart/form-data" method="post">
+                <div class="upload">
+                    <?php
+                        $image = $user["image"];
+                    ?>
+                    <img src="img/<?php echo $image; ?>" width="100px">
+                    <div class="round">
+                    <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
+                    <i class = "fa fa-camera" style = "color: #fff;"></i>
+                    </div>
+                </div>
+            </form>    
+            <script type="text/javascript">
+                document.getElementById("image").onchange = function(){
+                    document.getElementById("form").submit();
+                };
+            </script>                                          
+        </div>                                                       
     </section>
 
 
@@ -227,6 +238,53 @@
         </div>
       </div>
 
+       
+      <?php
+    if(isset($_FILES["image"]["name"])){
+      $id = $_POST["id"];
+      $name = $_POST["name"];
+
+      $imageName = $_FILES["image"]["name"];
+      $imageSize = $_FILES["image"]["size"];
+      $tmpName = $_FILES["image"]["tmp_name"];
+
+      // Image validation
+      $validImageExtension = ['jpg', 'jpeg', 'png'];
+      $imageExtension = explode('.', $imageName);
+      $imageExtension = strtolower(end($imageExtension));
+      if (!in_array($imageExtension, $validImageExtension)){
+        echo
+        "
+        <script>
+          alert('Invalid Image Extension');
+          document.location.href = 'test.php';
+        </script>
+        ";
+      }
+      elseif ($imageSize > 1200000){
+        echo
+        "
+        <script>
+          alert('Image Size Is Too Large');
+          document.location.href = 'test.php';
+        </script>
+        ";
+      }
+      else{
+        $newImageName = $name . " - " . date("Y.m.d") . " - " . date("h.i.sa"); 
+        $newImageName .= '.' . $imageExtension;
+        $query = "UPDATE profiles SET image = '$newImageName' WHERE id = $id";
+        mysqli_query($conn, $query);
+        move_uploaded_file($tmpName, 'img/' . $newImageName);
+        echo
+        "
+        <script>
+        document.location.href = 'test.php';
+        </script>
+        ";
+      }
+    }
+    ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
