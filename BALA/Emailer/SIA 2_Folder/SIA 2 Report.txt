@@ -1,0 +1,48 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: SIA 2.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1000 px x 2316 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Gotham Ultra (OTF)
+Gotham Book (OTF)
+Gotham Black (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/tascdesign/Documents/Akshay koushik design/2024/MARCH 24/emailer SIA/mahesh.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2500K, 800 by 800 pixels
+Dimensions: 366 by 366 points 
+Resolution: 157.377 by 157.377 pixels per inch

@@ -76,8 +76,9 @@
     color: #005F83;
 }
 .hero-banner .btn-primary:hover{
-    background: #005F83;
-    border-color: #005F83;
+    background-image: linear-gradient(to right, #02C0FA, #43DA38);
+    /* background: #17D700; */
+    border-color: #ffffff00;
     color: #fff;
 }
 
@@ -96,6 +97,10 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    color: #fff;
+}
+.info-media-content:hover{
+  color: #005F83 !important;
 }
 
 .info-benefits-mobile-slider .slick-dots, .info-support-mobile-slider .slick-dots{
@@ -209,6 +214,11 @@
     background-color:  #43DA38;
 
   }
+  .info-partner-media-content:hover{
+    background: linear-gradient(to bottom,  #43DA38,#02C0FA 50%,#43DA38);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
 
 
 @media (max-width: 767px){
@@ -245,6 +255,9 @@
 
 .info-bg-card{
     background-color: #F9F9F9;
+}
+.info-bg-card:hover{
+    background-color: #FFDF50;
 }
 .info-text-brand-blue{
     color: #01BFFF;
@@ -339,6 +352,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #065F81;
+}
+.info-requirements-media-content:hover{
+  background: linear-gradient(to right, #02C0FA, #43DA38);
+  color: #fff;  
+  transition: 0.3s;
 }
 
 .info-footer-bg .social-icons{
@@ -356,4 +375,8 @@
 
 .info-footer-bg ul li a{
   margin-right: 15px;
+}
+
+.info-line-height{
+  line-height: 2;
 }
