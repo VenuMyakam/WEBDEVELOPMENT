@@ -25,12 +25,6 @@ $(window).on('load', function() {
     gridAdjust(".info-requirements-mobile-slider .info-requirements-media-content");
 
 
-
-
-
-//     if ($(window).width() < 767) {
-//       gridAdjust(".features-card .info-list-item");
-//    }
   });
 
 $(document).ready(function() {
@@ -63,9 +57,6 @@ var mobileSlider = ($slidername, $slidesToShow, $dots, $arrows, $breakpoint) => 
       };
   
       slider.slick(settings);
-      // slider.on('laod', function(event, slick, currentSlide, nextSlide){
-      //     let actives = slider.find(".slick-active").addClass('balaraju');
-      // });
       slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
           slider.find(".slick-slide").removeClass('works');
           slider.find('.slick-current').addClass('works');

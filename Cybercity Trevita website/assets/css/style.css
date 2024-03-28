@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.info{
+  padding: 50px 0;
+}
+
+.bg-body-tertiary{
+    background-color: #000000 !important;
+}
+
+.info-text-brand-gold{
+  color: #BB9F6A !important;
+}
+
+.navbar-brand {
+  max-width: 120px;
+  width: 100%;
+  padding: 15px;
+  background-color: #000000;
+  max-height: 120px;
+  height: 120px;
+  border-bottom-left-radius: 1.3rem;
+  border-bottom-right-radius: 1.3rem;
+}
+.navbar-nav {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  border-radius: 2rem;
+  background-color: #000000;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: none;
+  text-align: center;
+}
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+.navbar-nav .nav-link.active {
+  color: #CDA341 !important;
+}
+.navbar-na .btn-primary{
+  background-color: #BB9F6A;
+  color: #000;
+  font-size: 14px;
+}
+.navbar-toggler {
+  background-color: #BB9F6A;
+}
+.fixed-tel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 9999;
+  text-align: center;
+}
+.fixed-tel .fa-phone-flip{
+    padding: 15px;
+    background: #BB9F6A;
+    color: #000;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.hero-banner{
+  background: url('../img/info-banner-img-01.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 120px);
+  position: relative;
+  margin-top: 120px;
+}
+.down-arrow img{
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+.info-aboutus-bg{
+  background-color: #121210 !important;
+}
+
+
+
+
+
+
+
+
+@media (max-width:1399px) {
+  .navbar-expand-lg .navbar-nav .nav-link, .navbar-na .btn-primary{
+    font-size: 0.6rem;
+  }
+}
+@media (max-width:991px) {
+  .navbar-expand-lg .navbar-nav .nav-link{
+    font-size: 0.8rem;
+  }
+  .navbar-nav .nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .navbar-na{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width:767px) {
+  .navbar-brand {
+    max-width: 120px;
+    width: 100%;
+    padding: 15px;
+    background-color: #000000;
+    max-height: 120px;
+    height: 120px;
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  }
+  .hero-banner{
+    min-height: calc(100vh - 120px);
+  }
+  .down-arrow img {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+  }
+}
